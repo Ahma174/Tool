@@ -1,0 +1,60 @@
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Among Us"
+tool.TextureId = "http://www.roblox.com/asset/?id=7494170406"
+tool.Activated:connect(function()
+local Sound = Instance.new("Sound") 
+local Id = "6425216149"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 1
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Moai"
+tool.TextureId = "http://www.roblox.com/asset/?id=12771531472"
+tool.Activated:connect(function()
+local Sound = Instance.new("Sound") 
+local Id = "8490606735"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 1
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "CocaCola"
+tool.TextureId = "http://www.roblox.com/asset/?id=10464319369"
+tool.Activated:connect(function()
+local Sound = Instance.new("Sound") 
+local Id = "5693336619"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 1
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "MetalPipe"
+tool.TextureId = "http://www.roblox.com/asset/?id="
+tool.Activated:connect(function()
+local Sound = Instance.new("Sound") 
+local Id = "6729922069"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 1
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
