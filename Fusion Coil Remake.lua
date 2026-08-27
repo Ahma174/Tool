@@ -1,6 +1,9 @@
 local player = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 
+local Healing = false
+local Value = 0
+
 local Fusion = Instance.new("Tool")
 Fusion.Name = "FusionCoil"
 Fusion.TextureId = "rbxassetid://983405257"
@@ -63,11 +66,22 @@ SpeedSB.Source = [[sp=script.Parent   function waitfor(a,b) 	while a:FindFirstCh
 SpeedSB.Parent = Fusion
 
 Fusion.Equipped:Connect(function()
+ Healing = true
+ Value += 1
  player.LocalPlayer.Character.Humanoid.WalkSpeed = 150
  player.LocalPlayer.Character.Humanoid.JumpPower = 125
  workspace.Gravity = 75
  Light.Enabled = true
  s:Play()
+if Value >= 1 then
+ while Healing do
+ task.wait(1)
+ player.LocalPlayer.Character.Humanoid.Health += 6
+end
+
+elseif Value > 1 then
+ Healing = false
+end
 end)
 
 Fusion.Unequipped:Connect(function()
@@ -75,4 +89,5 @@ Fusion.Unequipped:Connect(function()
  player.LocalPlayer.Character.Humanoid.JumpPower = 50
  workspace.Gravity = 196.2
  Light.Enabled = false
+ Healing = false
 end)
