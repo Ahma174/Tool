@@ -56,6 +56,7 @@ local SLight = Instance.new("SpotLight")
 SLight.Name = "SpotLight2"
 SLight.Angle = 70
 SLight.Brightness = 0.75
+SLight.Range = 60
 SLight.Color = Color3.fromRGB(244, 255, 233)
 SLight.Enabled = false
 SLight.Parent = LP
