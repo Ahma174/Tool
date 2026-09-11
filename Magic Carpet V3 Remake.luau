@@ -2,6 +2,7 @@
 -- Original Magic Carpet By Luckymaxer and Roblox!
 -- Original Script Style By ttyyuu12345!
 -- Open Source For Anyone to use!!!!
+-- This Gear Made Me Started Scripting
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
