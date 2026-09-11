@@ -1,8 +1,4 @@
--- AI was used on this only on finding errors!
--- Original Magic Carpet By Luckymaxer and Roblox!
--- Original Script Style By ttyyuu12345!
--- Open Source For Anyone to use!!!!
--- This Gear Made Me Started Scripting
+--Converted with ttyyuu12345's model to script plugin v4
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -134,7 +130,7 @@ Sit = {Animation = Tool:WaitForChild("Sit"), FadeTime = nil, Weight = nil, Speed
 
 Grips = {
 Normal = CFrame.new(-1.5, 0, 0, 0, 0, -1, -1, 8.90154915e-005, 0, 8.90154915e-005, 1, 0),
-Flying = CFrame.new(-1.5, 0.5, -0.75, -1, 0, -8.99756625e-009, -8.99756625e-009, 8.10000031e-008, 1, 7.28802977e-016, 0.99999994, -8.10000103e-008)
+Flying = CFrame.new(-1.5, 0.5, -2, -1, 0, -8.99756625e-009, -8.99756625e-009, 8.10000031e-008, 1, 7.28802977e-016, 0.99999994, -8.10000103e-008)
 }
 
 Flying = false
@@ -357,7 +353,7 @@ function Activated()
             end
         end
         spawn(function()
-            Tool.Grip = Grips.Normal
+            Tool.Grip = CFrame.new(-1.5, 0, -2, 1.91068547e-15, -4.37113883e-08, -1, -1, -4.37113883e-08, -0, -4.37113883e-08, 1, -4.37113883e-08)
             InvokeClient("StopAnimation", Animations.Sit)
         end)
     end
@@ -713,6 +709,4 @@ for i,v in pairs(cors) do
 	spawn(function()
 		pcall(v)
 	end)
-end
-end
 end
