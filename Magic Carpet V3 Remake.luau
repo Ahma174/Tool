@@ -1,4 +1,9 @@
---Converted with ttyyuu12345's model to script plugin v4
+-- AI was used on this only on finding errors!
+-- Original Magic Carpet By Luckymaxer and Roblox!
+-- Original Script Style By ttyyuu12345!
+-- Open Source For Anyone to use!!!!
+-- This Gear Made Me Started Scripting
+
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -40,7 +45,9 @@ SpecialMesh3.MeshId = "http://www.roblox.com/asset/?id=223079737"
 SpecialMesh3.TextureId = "http://www.roblox.com/asset/?id=223080038"
 SpecialMesh3.Scale = Vector3.new(1.125, 1.125, 1.125)
 SpecialMesh3.MeshType = Enum.MeshType.FileMesh
+RF1.Name = "ServerControl"
 RF1.Parent = Tool0
+RF2.Name = "ClientControl"
 RF2.Parent = Tool0
 A1.Name = "Sit"
 A1.AnimationId = "http://www.roblox.com/asset/?id=225279725"
@@ -709,4 +716,6 @@ for i,v in pairs(cors) do
 	spawn(function()
 		pcall(v)
 	end)
+end
+end
 end
