@@ -32,7 +32,7 @@ A1.AnimationId = "http://www.roblox.com/asset?id=148831127"
 A1.Parent = Tool0
 
 A2.Name = "BalloonHoldAnimationR15"
-A2.AnimationId = "http://www.roblox.com/asset?id=569145055"
+A2.AnimationId = "http://www.roblox.com/asset?id=569125949"
 A2.Parent = Tool0
 
 A3.Name = "BalloonFloatAnimation"
