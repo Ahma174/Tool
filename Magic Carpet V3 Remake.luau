@@ -3,6 +3,7 @@
 -- Original Script Style By ttyyuu12345!
 -- Open Source For Anyone to use!!!!
 -- This Gear Made Me Started Scripting
+-- Added Animation Playing And Stopping Support 👍
 
 function sandbox(var,func)
 	local env = getfenv(func)
@@ -61,6 +62,25 @@ table.insert(cors,sandbox(Script6,function()
 
 Tool = script.Parent
 Handle = Tool:WaitForChild("Handle")
+
+player = Tool.Parent.Parent
+hum = player.Character.Humanoid
+local anim
+local anim2
+
+if hum.RigType == Enum.HumanoidRigType.R6 then
+  A3 = Instance.new("Animation")
+  A3.AnimationId = "http://www.roblox.com/asset/?id=225279725"
+  A3.Parent = script
+  anim = hum:LoadAnimation(A3)
+  anim.Looped = true
+else
+  A4 = Instance.new("Animation")
+  A4.AnimationId = "rbxassetid://1239927101"
+  A4.Parent = script
+  anim2 = hum:LoadAnimation(A4)
+  anim2.Looped = true
+end
 
 Players = game:GetService("Players")
 Debris = game:GetService("Debris")
@@ -129,10 +149,6 @@ Vector3.new(0, 1, 0),
 Vector3.new(0, 1, 1),
 Vector3.new(0, 0, 1),
 Vector3.new(0.5, 0, 1)
-}
-
-Animations = {
-Sit = {Animation = Tool:WaitForChild("Sit"), FadeTime = nil, Weight = nil, Speed = nil, Duration = nil},
 }
 
 Grips = {
@@ -280,7 +296,11 @@ function Activated()
         end    
         
         spawn(function()
-            InvokeClient("PlayAnimation", Animations.Sit)
+          if hum.RigType == Enum.HumanoidRigType.R6 then
+          anim:Play()
+         else
+          anim2:Play()
+          end
             Tool.Grip = Grips.Flying
         end)
         
@@ -361,9 +381,13 @@ function Activated()
         end
         spawn(function()
             Tool.Grip = CFrame.new(-1.5, 0, -2, 1.91068547e-15, -4.37113883e-08, -1, -1, -4.37113883e-08, -0, -4.37113883e-08, 1, -4.37113883e-08)
-            InvokeClient("StopAnimation", Animations.Sit)
-        end)
-    end
+            if hum.RigType == Enum.HumanoidRigType.R6 then
+            anim:Stop()
+           else
+            anim2:Stop()
+           end
+       end)
+   end
     
     wait(2)
     
@@ -661,7 +685,7 @@ end
 
 function OnClientInvoke(mode, value)
     if mode == "PlayAnimation" and value and ToolEquipped and Humanoid then
-        SetAnimation("PlayAnimation", value)
+        SetAnimation(">", value)
     elseif mode == "StopAnimation" and value then
         SetAnimation("StopAnimation", value)
     elseif mode == "PlaySound" and value then
